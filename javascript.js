@@ -30,3 +30,23 @@ function multiplos10(){
         }
     }
 }
+
+function numeros(){
+    let impar=0, par=0;
+    for(let i=1; 1<=10; i++){
+        let numero = Math.floor(Math.random() * (1000 - 1) + 1);
+
+        let total = numero%2;
+
+        document.getElementById("numeros").innerHTML+= numero+",";
+        
+        if(total == 1){
+            impar= impar+1;
+        }else{
+            par = par+1;
+        }
+    }
+
+    document.getElementById("impar").innerHTML+= impar;
+    document.getElementById("par").innerHTML+= par;
+}
