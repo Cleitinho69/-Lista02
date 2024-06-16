@@ -39,7 +39,12 @@ function numeros() {
 
         let total = numero % 2;
 
-        document.getElementById("numeros").innerHTML += numero + ",";
+        document.getElementById("numeros").innerHTML += numero;
+        if(i<10){
+            document.querySelector("#numeros").innerHTML += ', ';
+        }else{
+            document.querySelector("#numeros").innerHTML += '.';
+        }
 
         if (total === 1) {
             impar = impar + 1;
